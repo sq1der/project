@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EspressoDay Café</title>
+    <link rel="stylesheet" href="2in1.css">
+
+</head>
+<body>
+    <div id="current-date"></div>
+    <header class="header-section">
+        <h1>EspressoDay</h1>
+        <nav class="navbar">
+            <a href="#menu" class="nav-link">Menu</a> |
+            <a href="#about" class="nav-link">About Us</a> |
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+    </header>
+    <div id="greeting" class="section-heading"></div>
+    <input type="text" id="nameInput" class="form-input" placeholder="Enter your name" />
+    <button id="submitButton" class="subscribe-btn">Submit</button>
+    <hr>
+    <main>
+        <div id="auth-container">
+            <div id="login-form" class="auth-form">
+                <h2>Вход</h2>
+                <input type="text" id="username" placeholder="Имя пользователя">
+                <input type="password" id="password" placeholder="Пароль">
+                <button onclick="login()">Войти</button>
+            </div>
+            
+            <div id="welcome" class="auth-form" style="display: none;">
+                <h2>Добро пожаловать, <span id="display-username"></span>!</h2>
+                <button onclick="logout()">Выйти</button>
+            </div>
+        </div>
+
+
+        <button id="theme-toggle-btn" class="subscribe-btn">Switch Theme</button>
+        
+        <section id="menu" class="content-section">
+            <h2 class="section-heading">Menu</h2>
+            <p class="paragraph-text">Discover our delicious coffee blends and mouth-watering pastries.</p>
+            <figure class="image-thumbnail">
+                <img width=400 src="https://avatars.mds.yandex.net/i?id=2851f6595c742405afe47d11100f90a14752120b-5700446-images-thumbs&n=13" alt="A cup of espresso">
+                <figcaption>Our signature espresso, brewed to perfection.</figcaption>
+            </figure>
+        </section>
+    <div id="filter-section">
+        <select id="category-filter">
+            <option value="all">Все категории</option>
+            <option value="coffee">Кофе</option>
+            <option value="tea">Чай</option>
+            <option value="snacks">Закуски</option>
+        </select>
+    </div>
+
+
+    <ul id="item-list">
+        <li class="item coffee">Эспрессо</li>
+        <li class="item tea">Зеленый чай</li>
+        <li class="item snacks">Круассан</li>
+        <li class="item coffee">Латте</li>
+    </ul>
+        <hr>
+        <section id="about" class="content-section">
+            <h2 class="section-heading">About EspressoDay</h2>
+            <p class="paragraph-text">We are a cozy coffee house located in all places of the city, dedicated to serving the best coffee in town. We have 30 branches in the city.</p>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-heading">Customer Reviews</h2>
+            <blockquote class="paragraph-text">
+                "EspressoDay serves the best coffee I've ever had. A must-visit for coffee lovers!"
+            </blockquote>
+        </section>
+
+        <section id="popular-items" class="content-section">
+            <h1 class="section-heading">Popular Items</h1>
+            <ol>
+                <li class="menu-item">Espresso</li>
+                <li class="menu-item">Cappuccino</li>
+                <li class="menu-item">Latte</li>
+            </ol>
+        </section>
+        <hr>
+        <section class="content-section">
+            <h2 class="section-heading">Business Hours</h2>
+            <dl>
+                <dt>Monday - Sunday:</dt>
+                <dd>8:00 AM - 23:00 PM</dd>
+            </dl>
+        </section>
+        <button id="sound-button">Play Sound</button> 
+        <hr>
+        <section id="faq" class="content-section">
+            <h2 class="section-heading">Frequently Asked Questions</h2>
+            <div>
+                <h3 class="faq-question">What are your opening hours?</h3>
+                <p class="faq-answer" style="display: none;">We are open from 8 AM to 11 PM every day.</p>
+            </div>
+            <div>
+                <h3 class="faq-question">Where are you located?</h3>
+                <p class="faq-answer" style="display: none;">We are located at 27/1 Ilyas Omarova Street, Astana.</p>
+            </div>
+        </section>
+        <hr>
+        <button class="subscribe-btn" id="popup-btn">Subscribe</button>
+
+        <div id="popup-form" style="display: none;">
+            <div class="popup-content">
+                <span id="close-popup">&times;</span>
+                <h2>Subscribe to our newsletter</h2>
+                <form>
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <section id="contact" class="content-section">
+            <h2 class="section-heading">Contact Us</h2>
+            <form id="contact-form" action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" class="form-input"><br>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-input"><br>
+        
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" class="form-input"></textarea><br>
+        
+                <input type="submit" value="Send" class="submit-btn button-hover-effect">
+            </form>
+        </section>
+        <div class="button-container">
+            <button id="bg-change-btn">Change Background Color</button>
+        </div>
+        <hr>
+    </main>
+    
+
+    <footer class="footer-bg">
+        <p>EspressoDay - Your daily dose of happiness.</p>
+        <p>&copy; 2024 EspressoDay | Contact us <a href="mailto:Espressoday2023@gmail.com">Espressoday2023@gmail.com</a></p>
+        <p>Created by Aman Belgibay</p>
+    </footer>
+    <script src="validation.js"></script>
+    <script src="script.js"></script>
+    <script src="filter.js"></script>
+</body>
+</html>
